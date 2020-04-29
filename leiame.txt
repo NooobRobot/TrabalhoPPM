@@ -1,0 +1,52 @@
+QUASAR / vue2 - cmder - windows10
+instalacao via node =>10
+
+cmder
+	npm install -g @quasar/cli
+
+criar um projeto
+	$ quasar create lista
+	*sass with scss
+	*seleciona nenhuma opcao
+
+vai no projeto 
+	$ cd lista -> vai no diretorio
+	$ quasar dev -> roda o programa
+
+vc vai modificar os seguintes arquivos:
+
+src/ pages/ Index.vue -> pagina inicial
+src/ pages/ Help. vue -> página de ajuda
+src/ pages/ ... ->paginas que quer modificar
+
+
+	...tabalha no projeto...
+	utilizar o site/ documentacao oficial quasar.dev (ainda há poucos tutoriais no Youtube)
+
+outros arquivos que precisam ser modificados sao:
+
+src/ layout/ MainLayout.vue -> layout do menu principal e direcionamento das páginas do app
+
+src/ router/ routes.js -> faz as rotas das páginas dos templates .vue em src/ pages
+
+para buildar / rodar : $ quasar build -m electron
+
+vai dar um erro, deleta a pasta node_modules,
+instala novamente através do npm install
+
+e roda denovo $ quasar build -m electron
+
+
+para o CRUD de contatos:
+adicionado dependencia necessaria para o crud de Dados pagina de contatos
+npm install vuelidate --save
+adiciona arquivo vualidate.js em boot
+modifica o arquivo quasar.conf.js
+
+para a localização do usuário no Mapa:
+
+criar uma conta / api key no google developers console
+chave google api key AIzaSyCOei7zat28h7J8XST-flZraRiUIwrJpNo
+para fazer integracao com maps criar a api key e um novo dashboard
+habilitar billing (usar credito gratis do google)
+https://softauthor.com/vuejs-geolocation-get-user-location
